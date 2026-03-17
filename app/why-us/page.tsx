@@ -1,27 +1,22 @@
 import PageHero from "@/components/page-hero";
-import SectionShell from "@/components/section-shell";
-import { ShieldCheck, Truck, Users, Factory } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 const reasons = [
   {
     title: "Consistent Quality",
-    text: "Our process is focused on dependable product performance and quality assurance.",
-    icon: ShieldCheck,
+    text: "Strict quality standards ensure reliable performance.",
   },
   {
     title: "Reliable Supply",
-    text: "We support timely delivery and practical coordination for industrial needs.",
-    icon: Truck,
+    text: "Timely delivery and dependable coordination.",
   },
   {
     title: "Customer Trust",
-    text: "Long-term relationships are built through service, communication, and consistency.",
-    icon: Users,
+    text: "Strong long-term relationships with clients.",
   },
   {
     title: "Industry Focus",
-    text: "Our products are aligned with real industrial usage and client requirements.",
-    icon: Factory,
+    text: "Products designed for real industrial needs.",
   },
 ];
 
@@ -30,33 +25,21 @@ export default function WhyUsPage() {
     <>
       <PageHero
         badge="Why Choose Us"
-        title="Dependability that supports every project"
-        description="We combine product quality, service responsiveness, and practical manufacturing support to help clients move with confidence."
+        title="A partner you can trust"
+        description="We combine quality, reliability, and service to support industrial success."
       />
 
-      <SectionShell
-        title="What makes us different"
-        description="This page highlights the brand trust points that matter most to industrial buyers."
-      >
-        <div className="grid gap-6 md:grid-cols-2">
-          {reasons.map((reason) => {
-            const Icon = reason.icon;
-
-            return (
-              <div
-                key={reason.title}
-                className="rounded-[1.75rem] border border-border bg-card p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-              >
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-primary/10">
-                  <Icon className="h-7 w-7 text-primary" />
-                </div>
-                <h3 className="mb-3 text-2xl font-bold">{reason.title}</h3>
-                <p className="leading-8 text-muted-foreground">{reason.text}</p>
-              </div>
-            );
-          })}
+      <section className="section-space bg-section-accent-soft">
+        <div className="container-shell grid gap-6 md:grid-cols-2">
+          {reasons.map((r) => (
+            <div key={r.title} className="premium-card p-6">
+              <CheckCircle2 className="mb-3 h-5 w-5 text-primary" />
+              <h3>{r.title}</h3>
+              <p className="text-body-soft mt-2">{r.text}</p>
+            </div>
+          ))}
         </div>
-      </SectionShell>
+      </section>
     </>
   );
 }

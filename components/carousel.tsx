@@ -87,7 +87,7 @@ export default function Carousel() {
 
       <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between">
         <div className="rounded-2xl bg-white/80 px-4 py-3 backdrop-blur-md">
-          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+          <p className="nav-font text-xs font-semibold uppercase tracking-[0.18em] text-primary">
             Sakura Pipe
           </p>
           <p className="mt-1 text-sm font-medium text-foreground sm:text-base">
