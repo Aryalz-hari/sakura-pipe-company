@@ -2,16 +2,16 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border/70 bg-card">
-      <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+    <footer className="border-t border-border/70 bg-secondary/40">
+      <div className="container-shell py-12">
         <div className="grid gap-10 md:grid-cols-[1.2fr_0.8fr] md:items-start">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-primary text-lg font-black text-primary-foreground shadow-sm">
+              <div className="footer-font flex h-11 w-11 items-center justify-center rounded-2xl bg-primary text-lg font-black text-primary-foreground shadow-sm">
                 S
               </div>
               <div>
-                <p className="text-lg font-extrabold text-primary">
+                <p className="footer-font text-lg font-extrabold text-primary">
                   Sakura Pipe
                 </p>
                 <p className="text-sm text-muted-foreground">
@@ -28,7 +28,7 @@ export default function Footer() {
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 md:grid-cols-2">
             <div>
-              <p className="mb-3 text-sm font-bold text-foreground">
+              <p className="footer-font mb-3 text-sm font-bold text-foreground">
                 Quick Links
               </p>
               <div className="space-y-2 text-sm text-muted-foreground">
@@ -60,7 +60,9 @@ export default function Footer() {
             </div>
 
             <div>
-              <p className="mb-3 text-sm font-bold text-foreground">Contact</p>
+              <p className="footer-font mb-3 text-sm font-bold text-foreground">
+                Contact
+              </p>
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p>+91 98765 43210</p>
                 <p>info@sakurapipe.com</p>

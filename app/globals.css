@@ -16,7 +16,7 @@
   --primary: #0b8f3a;
   --primary-foreground: #ffffff;
 
-  --secondary: #f1f4f1;
+  --secondary: #eef5ef;
   --secondary-foreground: #1a1a1a;
 
   --muted: #d9d9d9;
@@ -96,7 +96,8 @@
 }
 
 @theme inline {
-  --font-sans: "Geist", "Geist Fallback";
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-poppins);
   --font-mono: "Geist Mono", "Geist Mono Fallback";
 
   --color-background: var(--background);
@@ -167,7 +168,7 @@
   }
 
   ::selection {
-    background: color-mix(in srgb, var(--primary) 18%, white);
+    background: rgba(11, 143, 58, 0.18);
     color: var(--foreground);
   }
 
@@ -177,8 +178,9 @@
   h4,
   h5,
   h6 {
-    @apply text-foreground;
+    font-family: var(--font-heading);
     letter-spacing: -0.03em;
+    @apply text-foreground;
   }
 
   p {
@@ -241,7 +243,11 @@
   }
 
   .text-gradient-brand {
-    background: linear-gradient(135deg, var(--primary), color-mix(in srgb, var(--primary) 72%, white));
+    background: linear-gradient(
+      135deg,
+      var(--primary),
+      color-mix(in srgb, var(--primary) 72%, white)
+    );
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -279,5 +285,46 @@
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
+  }
+
+  .bg-section-soft {
+    background:
+      linear-gradient(to bottom, rgba(11, 143, 58, 0.035), rgba(255, 255, 255, 0)),
+      var(--background);
+  }
+
+  .bg-section-card {
+    background-color: var(--card);
+  }
+
+  .bg-section-accent-soft {
+    background:
+      radial-gradient(circle at top right, rgba(215, 38, 46, 0.05), transparent 25%),
+      radial-gradient(circle at bottom left, rgba(11, 143, 58, 0.05), transparent 25%),
+      var(--card);
+  }
+
+  .section-badge-primary {
+    @apply inline-flex rounded-full border border-primary/15 bg-primary/10 px-4 py-2 text-sm font-semibold text-primary shadow-sm;
+  }
+
+  .section-badge-accent {
+    @apply inline-flex rounded-full border border-accent/15 bg-accent/10 px-4 py-2 text-sm font-semibold text-accent shadow-sm;
+  }
+
+  .text-body-soft {
+    @apply leading-8 text-muted-foreground;
+  }
+
+  .heading-xl {
+    @apply text-3xl font-black tracking-tight sm:text-4xl lg:text-5xl;
+  }
+
+  .nav-font {
+    font-family: var(--font-heading);
+  }
+
+  .footer-font {
+    font-family: var(--font-heading);
   }
 }

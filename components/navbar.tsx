@@ -45,24 +45,24 @@ export default function Navbar() {
       }`}
     >
       <div
-        className={`mx-auto mt-3 w-[calc(100%-1rem)] max-w-7xl rounded-2xl border transition-all duration-300 sm:w-[calc(100%-2rem)] ${
+        className={`container-shell mt-3 rounded-2xl border ${
           scrolled
-            ? "border-border/80 bg-background/90 shadow-lg backdrop-blur-xl"
-            : "border-white/30 bg-background/70 backdrop-blur-md"
+            ? "glass-card shadow-premium"
+            : "border-white/30 bg-background/75 backdrop-blur-md"
         }`}
       >
-        <div className="flex items-center justify-between px-4 py-3 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between py-3">
           <Link href="/" className="group flex items-center gap-3">
             <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-primary text-lg font-black text-primary-foreground shadow-md">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.25),transparent_60%)]" />
-              <span className="relative">S</span>
+              <span className="relative nav-font">S</span>
             </div>
 
             <div>
-              <p className="text-base font-extrabold leading-none text-primary sm:text-xl">
+              <p className="nav-font text-base font-extrabold leading-none text-primary sm:text-xl">
                 Sakura Pipe
               </p>
-              <p className="mt-1 text-xs text-muted-foreground sm:text-sm">
+              <p className="text-xs text-muted-foreground sm:text-sm">
                 Udhyog Pvt. Ltd.
               </p>
             </div>
@@ -76,7 +76,7 @@ export default function Navbar() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`rounded-full px-4 py-2 text-sm font-semibold transition ${
+                  className={`nav-font rounded-full px-4 py-2 text-sm font-semibold transition ${
                     active
                       ? "bg-primary text-primary-foreground shadow-sm"
                       : "text-foreground hover:bg-primary/10 hover:text-primary"
@@ -95,13 +95,13 @@ export default function Navbar() {
               </div>
               <div className="leading-tight">
                 <p className="text-xs text-muted-foreground">Call Us</p>
-                <p className="font-semibold">+91 98765 43210</p>
+                <p className="nav-font font-semibold">+91 98765 43210</p>
               </div>
             </div>
 
             <Link
               href="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:translate-y-[-1px] hover:bg-accent hover:shadow-lg"
+              className="nav-font inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:translate-y-[-1px] hover:bg-accent hover:shadow-lg"
             >
               Get Quote
               <ArrowRight className="h-4 w-4" />
@@ -132,7 +132,7 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`rounded-xl px-4 py-3 text-sm font-semibold transition ${
+                    className={`nav-font rounded-xl px-4 py-3 text-sm font-semibold transition ${
                       active
                         ? "bg-primary text-primary-foreground"
                         : "bg-card text-foreground hover:bg-primary/10 hover:text-primary"
@@ -151,13 +151,13 @@ export default function Navbar() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground">Contact</p>
-                  <p className="font-semibold">+91 98765 43210</p>
+                  <p className="nav-font font-semibold">+91 98765 43210</p>
                 </div>
               </div>
 
               <Link
                 href="/contact"
-                className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-accent"
+                className="nav-font mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition hover:bg-accent"
               >
                 Get Quote
                 <ArrowRight className="h-4 w-4" />
