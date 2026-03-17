@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import Carousel from "@/components/carousel";
 import {
   ArrowRight,
@@ -161,7 +162,34 @@ export default function HomePage() {
           <div className="grid gap-6 md:grid-cols-3">
             {["Pipes", "Fittings", "Custom Supply"].map((p) => (
               <div key={p} className="premium-card p-6">
-                <div className="mb-4 h-40 rounded-xl bg-primary/10" />
+                {p === "Pipes" ? (
+                  <div className="mb-4 h-40 rounded-xl overflow-hidden relative">
+                    <Image
+                      src="/images/pipes.jpg"
+                      alt="Pipes"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : p === "Fittings" ? (
+                  <div className="mb-4 h-40 rounded-xl overflow-hidden relative">
+                    <Image
+                      src="/images/fittings.jpg"
+                      alt="Fittings"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                ) : (
+                  <div className="mb-4 h-40 rounded-xl overflow-hidden relative">
+                    <Image
+                      src="/images/custom.jpg"
+                      alt="Custom Supply"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
 
                 <h3 className="text-lg font-bold leading-snug tracking-[-0.02em] sm:text-xl">
                   {p}
