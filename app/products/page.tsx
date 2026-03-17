@@ -108,6 +108,7 @@ export default function ProductsPage() {
       />
 
       <section className="section-space bg-section-soft">
+        <div className="absolute inset-0 hero-glow" />
         <div className="container-shell">
           <div className="mx-auto max-w-5xl">
             <div className="mb-3 text-center">
