@@ -18,6 +18,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Sakura Pipe Udhyog Pvt. Ltd.",
   description: "Premium industrial pipes and fittings website.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

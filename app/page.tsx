@@ -46,7 +46,7 @@ export default function HomePage() {
               </div>
 
               <h1 className="max-w-xl text-[2.2rem] font-black leading-[1] tracking-[-0.04em] sm:text-5xl lg:text-6xl xl:text-[4rem]">
-                Premium Pipes for{" "} <br />
+                Premium Pipes for <br />
                 <span className="text-gradient-brand">Industrial Strength</span>
               </h1>
 
