@@ -10,6 +10,7 @@ export default function ContactPage() {
       />
 
       <section className="section-space bg-section-card">
+        <div className="absolute inset-0 hero-glow" />
         <div className="container-shell grid gap-10 lg:grid-cols-2">
           <div>
             <h2 className="heading-xl">Get in touch</h2>

@@ -30,6 +30,7 @@ export default function WhyUsPage() {
       />
 
       <section className="section-space bg-section-accent-soft">
+        <div className="absolute inset-0 hero-glow" />
         <div className="container-shell grid gap-6 md:grid-cols-2">
           {reasons.map((r) => (
             <div key={r.title} className="premium-card p-6">

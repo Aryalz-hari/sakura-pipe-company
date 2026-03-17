@@ -41,6 +41,7 @@ export default function AboutPage() {
       />
 
       <section className="section-space bg-section-card">
+        <div className="absolute inset-0 hero-glow" />
         <div className="container-shell grid gap-10 lg:grid-cols-[1fr_1fr] lg:items-start">
           <div className="space-y-5">
             <div className="section-badge-accent text-xs sm:text-sm">
