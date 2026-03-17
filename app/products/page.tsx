@@ -13,7 +13,7 @@ type Category =
 type Product = {
   title: string;
   category: Category;
-  text: string;
+  description: string;
   image: string;
 };
 
@@ -27,75 +27,66 @@ const categories: Category[] = [
 
 const products: Product[] = [
   {
-    title: "Industrial Pipes",
+    title: "CPVC Plus",
     category: "Plumbing",
-    text: "Strong, reliable, and suitable for demanding industrial systems.",
-    image: "https://via.placeholder.com/400x300/cccccc/000000?text=Industrial+Pipes"
+    description:
+      "Lead-free CPVC hot and cold water piping systems designed for durability and clean flow performance.",
+    image: "/images/products/cpvc-plus.webp",
   },
   {
-    title: "Pipe Fittings",
+    title: "AquaPro",
     category: "Plumbing",
-    text: "Designed for secure flow management and stable installation performance.",
-    image: "https://via.placeholder.com/400x300/cccccc/000000?text=Pipe+Fittings"
+    description:
+      "uPVC plumbing pipes and fittings designed for efficient installation and reliable water flow.",
+    image: "/images/products/aquapro.jpeg",
   },
   {
-    title: "Custom Specifications",
+    title: "HDPE",
     category: "Water Supply",
-    text: "Support for projects that require tailored sizes and supply planning.",
-    image: "https://via.placeholder.com/400x300/cccccc/000000?text=Custom+Specs"
+    description:
+      "High-density polyethylene piping solutions for dependable water supply and industrial use.",
+    image: "/images/products/hdpe.jpeg",
   },
   {
-    title: "Bulk Orders",
-    category: "Water Supply",
-    text: "Dependable manufacturing support for commercial and industrial quantity needs.",
-    image: "https://via.placeholder.com/400x300/cccccc/000000?text=Bulk+Orders"
-  },
-  {
-    title: "HDPE Pipe",
-    category: "Water Supply",
-    text: "High-density polyethylene pipes known for their durability and corrosion resistance.",
-    image: "https://via.placeholder.com/400x300/cccccc/000000?text=HDPE+Pipe"
-  },
-  {
-    title: "Hose Pipe",
-    category: "Agriculture & Drainage",
-    text: "Flexible hoses for various applications, providing easy installation and versatility.",
-    image: "https://via.placeholder.com/400x300/cccccc/000000?text=Hose+Pipe"
-  },
-  {
-    title: "Pipe Joints",
-    category: "Agriculture & Drainage",
-    text: "Various types of joints and connectors for secure and leak-proof connections.",
-    image: "https://via.placeholder.com/400x300/cccccc/000000?text=Pipe+Joints"
+    title: "Wiresafe",
+    category: "Electricity",
+    description:
+      "Electrical conduit systems designed to protect wiring installations across residential and commercial projects.",
+    image: "/images/products/wiresafe.webp",
   },
   {
     title: "RainPro",
     category: "Agriculture & Drainage",
-    text: "Rainwater gutter and drainage solutions built for water collection and disposal efficiency.",
+    description:
+      "Rainwater gutter and drainage solutions built for water collection and disposal efficiency.",
     image: "/images/products/rainpro.jpeg",
   },
   {
     title: "Borewell",
     category: "Water Supply",
-    text: "Borewell casing and column piping solutions made for strength and dependable underground water applications.",
+    description:
+      "Borewell casing and column piping solutions made for strength and dependable underground water applications.",
     image: "/images/products/borewell.jpeg",
   },
   {
     title: "UltraFlo",
     category: "Agriculture & Drainage",
-    text: "Agriculture pressure piping systems engineered for irrigation and field water management needs.",
+    description:
+      "Agriculture pressure piping systems engineered for irrigation and field water management needs.",
     image: "/images/products/ultraflow.jpeg",
   },
   {
     title: "ProDrain",
     category: "Agriculture & Drainage",
-    text: "Drainage piping systems manufactured for effective waste and soil drainage flow management.",
+    description:
+      "Drainage piping systems manufactured for effective waste and soil drainage flow management.",
     image: "/images/products/prodrain.png",
   },
   {
     title: "Underground",
     category: "Water Supply",
-    text: "Underground drainage and piping solutions designed for long-term buried installation performance.",
+    description:
+      "Underground drainage and piping solutions designed for long-term buried installation performance.",
     image: "/images/products/underground.jpeg",
   },
 ];
@@ -156,14 +147,12 @@ export default function ProductsPage() {
                   key={product.title}
                   className="overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
-                  <div className="bg-[#fafafaeb] p-4">
-                    <div className="flex h-40 items-center justify-center bg-white p-3">
-                      <img
-                        src={product.image}
-                        alt={product.title}
-                        className="max-h-full max-w-full object-contain transition duration-300 hover:scale-105"
-                      />
-                    </div>
+                  <div className="relative h-52 overflow-hidden bg-[#ffffff]">
+                    <img
+                      src={product.image}
+                      alt={product.title}
+                      className="h-full w-full object-contain p-4 transition duration-300 hover:scale-105"
+                    />
                   </div>
 
                   <div className="p-4">
@@ -172,7 +161,7 @@ export default function ProductsPage() {
                     </p>
 
                     <p className="mt-2 line-clamp-4 text-sm leading-6 text-muted-foreground">
-                      {product.text}
+                      {product.description}
                     </p>
                   </div>
                 </article>
