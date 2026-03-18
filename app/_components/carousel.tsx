@@ -70,7 +70,7 @@ export default function Carousel() {
         <div className="flex">
           {slides.map((slide) => (
             <div key={slide.src} className="relative min-w-full">
-              <div className="relative h-[320px] w-full sm:h-[420px] lg:h-[520px]">
+              <div className="relative h-80 w-full sm:h-105 lg:h-130">
                 <Image
                   src={slide.src}
                   alt={slide.alt}
@@ -78,7 +78,7 @@ export default function Carousel() {
                   priority
                   className="object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-tr from-black/35 via-black/10 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-tr from-black/35 via-black/10 to-transparent" />
               </div>
             </div>
           ))}

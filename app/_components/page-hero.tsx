@@ -56,16 +56,16 @@ export default function PageHero({
           </div>
 
           {/* Right Visual */}
-          <div className="relative min-h-[300px] sm:min-h-[360px] lg:min-h-[470px]">
+          <div className="relative min-h-75 sm:min-h-90 lg:min-h-117.5">
             {/* Big bottom curved shape */}
-            <div className="absolute bottom-0 left-[-6%] right-[-10%] h-[72%] rounded-t-[14rem] bg-gradient-to-r from-foreground via-primary to-primary/90" />
+            <div className="absolute bottom-0 left-[-6%] right-[-10%] h-[72%] rounded-t-[14rem] bg-linear-to-r from-foreground via-primary to-primary/90" />
 
             {/* Right decorative blue shape equivalent using brand green */}
             <div className="absolute bottom-0 right-[-4%] h-[58%] w-[46%] rotate-[-10deg] rounded-tl-[6rem] bg-primary" />
 
             {/* Framed Image Shape */}
-            <div className="absolute right-[2%] top-0 z-10 w-[76%] max-w-[560px]">
-              <div className="rounded-[3rem] bg-gradient-to-br from-primary via-primary to-foreground p-3 shadow-2xl [clip-path:polygon(21%_0%,74%_0%,100%_24%,100%_79%,79%_100%,23%_100%,0%_75%,0%_22%)]">
+            <div className="absolute right-[2%] top-0 z-10 w-[76%] max-w-140">
+              <div className="rounded-[3rem] bg-linear-to-br from-primary via-primary to-foreground p-3 shadow-2xl [clip-path:polygon(21%_0%,74%_0%,100%_24%,100%_79%,79%_100%,23%_100%,0%_75%,0%_22%)]">
                 <div className="relative aspect-[1/0.9] overflow-hidden rounded-[2.4rem] bg-card [clip-path:polygon(21%_0%,74%_0%,100%_24%,100%_79%,79%_100%,23%_100%,0%_75%,0%_22%)]">
                   <Image
                     src={imageSrc}

@@ -146,7 +146,7 @@ export default function ProductsPage() {
               {filteredProducts.map((product) => (
                 <article
                   key={product.title}
-                  className="overflow-hidden rounded-[1.5rem] border border-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
+                  className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl"
                 >
                   <div className="relative h-52 overflow-hidden bg-[#ffffff]">
                     <img
