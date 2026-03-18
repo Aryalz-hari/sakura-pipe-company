@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -9,53 +9,41 @@ import { navLinks } from "@/lib/nav-links";
 export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [visible, setVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      setScrolled(currentScrollY > 16);
-
-      if (currentScrollY < 20) {
-        setVisible(true);
-      } else if (currentScrollY > lastScrollY) {
-        setVisible(false);
-      } else {
-        setVisible(true);
-      }
-
-      setLastScrollY(currentScrollY);
+      setScrolled(window.scrollY > 16);
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  }, []);
 
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
 
   return (
-    <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-        visible ? "translate-y-0" : "-translate-y-full"
-      }`}
-    >
+    <header className="fixed top-0 z-50 w-full">
       <div
-        className={`container-shell mt-3 rounded-2xl border ${
+        className={`container-shell mt-3 rounded-2xl border transition-all duration-500 ease-out ${
           scrolled
-            ? "glass-card shadow-premium"
-            : "border-white/30 bg-background/75 backdrop-blur-md"
+            ? "border-border/40 bg-background/20 backdrop-blur-2xl shadow-lg"
+            : "border-white/30 bg-background/80 backdrop-blur-xl"
         }`}
       >
         <div className="flex items-center justify-between py-3">
           <Link href="/" className="group flex items-center gap-3">
             <div className="relative flex h-11 w-11 items-center justify-center overflow-hidden rounded-2xl bg-primary text-lg font-black text-primary-foreground shadow-md">
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.25),transparent_60%)]" />
-              <span className="relative nav-font">S</span>
+              <Image
+              className="scale-150"
+                src="/logo.png"
+                width={500}
+                height={500}
+                alt="Picture of the author"
+              />
             </div>
 
             <div>

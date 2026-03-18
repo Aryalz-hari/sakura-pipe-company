@@ -1,4 +1,4 @@
-import PageHero from "@/components/page-hero";
+import PageHero from "@/app/_components/page-hero";
 
 export default function ContactPage() {
   return (
