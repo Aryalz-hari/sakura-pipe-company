@@ -46,7 +46,7 @@ export default function HomePage() {
                 Quality You Can Trust
               </div>
 
-              <h1 className="max-w-xl text-[2.2rem] font-black leading-[1] tracking-[-0.04em] sm:text-5xl lg:text-6xl xl:text-[4rem]">
+              <h1 className="max-w-xl text-[2.2rem]  font-bold leading-none tracking-[-0.04em] sm:text-5xl lg:text-6xl xl:text-[4rem]">
                 Premium Pipes for <br />
                 <span className="text-gradient-brand">Industrial Strength</span>
               </h1>
@@ -93,7 +93,7 @@ export default function HomePage() {
             </div>
 
             <div className="lg:-mt-6">
-              <div className="border-gradient-subtle overflow-hidden rounded-[2rem] shadow-2xl">
+              <div className="border-gradient-subtle overflow-hidden rounded-4xl shadow-2xl">
                 <Carousel />
               </div>
             </div>
@@ -231,7 +231,7 @@ export default function HomePage() {
               ].map((item) => (
                 <div
                   key={item}
-                  className="rounded-[1.5rem] border border-border/70 bg-background p-5 shadow-sm"
+                  className="rounded-3xl border border-border/70 bg-background p-5 shadow-sm"
                 >
                   <CheckCircle2 className="mb-3 h-5 w-5 text-primary" />
                   <p className="text-base font-semibold leading-7 text-foreground">
@@ -246,7 +246,7 @@ export default function HomePage() {
 
       <section className="section-space">
         <div className="container-shell">
-          <div className="rounded-[2rem] bg-primary p-8 text-center text-white shadow-2xl sm:p-10 lg:p-12">
+          <div className="rounded-4xl bg-primary p-8 text-center text-white shadow-2xl sm:p-10 lg:p-12">
             <h2 className="text-2xl font-bold leading-tight text-white sm:text-3xl lg:text-4xl">
               Ready to start your project?
             </h2>

@@ -47,10 +47,10 @@ export default function Navbar() {
             </div>
 
             <div>
-              <p className="nav-font text-base font-extrabold leading-none text-primary sm:text-xl">
+              <p className="nav-font text-red-800 text-base font-extrabold leading-none  sm:text-xl">
                 Sakura Pipe
               </p>
-              <p className="text-xs text-muted-foreground sm:text-sm">
+              <p className="text-xs  sm:text-sm text-primary">
                 Udhyog Pvt. Ltd.
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function Navbar() {
 
             <Link
               href="/contact"
-              className="nav-font inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:translate-y-[-1px] hover:bg-accent hover:shadow-lg"
+              className="nav-font inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:-translate-y-px hover:bg-accent hover:shadow-lg"
             >
               Get Quote
               <ArrowRight className="h-4 w-4" />
