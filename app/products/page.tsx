@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import PageHero from "@/components/page-hero";
+import PageHero from "@/app/_components/page-hero";
 
 type Category =
   | "All"

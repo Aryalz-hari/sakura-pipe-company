@@ -1,4 +1,4 @@
-import PageHero from "@/components/page-hero";
+import PageHero from "@/app/_components/page-hero";
 import { CheckCircle2 } from "lucide-react";
 
 const reasons = [

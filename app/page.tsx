@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import Carousel from "@/components/carousel";
+import Carousel from "@/app/_components/carousel";
 import {
   ArrowRight,
   ShieldCheck,

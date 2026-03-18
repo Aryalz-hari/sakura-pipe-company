@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
-import Footer from "@/components/footer";
+import Navbar from "@/app/_components/navbar";
+import Footer from "@/app/_components/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -18,9 +18,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Sakura Pipe Udhyog Pvt. Ltd.",
   description: "Premium industrial pipes and fittings website.",
-  icons: {
-    icon: "/favicon.svg",
-  },
+
 };
 
 export default function RootLayout({
