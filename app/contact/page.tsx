@@ -75,13 +75,11 @@ export default function ContactPage() {
       />
 
       <section className="section-space bg-section-card relative">
-        <div className="absolute inset-0 hero-glow" />
+        <div className="absolute inset-0 hero-glow pointer-events-none" />
 
-        <div className="container-shell grid gap-10 lg:grid-cols-2">
-          {/* LEFT SIDE */}
+        <div className="container-shell relative z-10 grid gap-10 lg:grid-cols-2">
           <div>
             <h2 className="heading-xl">Get in touch</h2>
-
             <p className="text-body-soft mt-4 sm:text-lg">
               Our team is ready to help you with your industrial requirements.
             </p>
@@ -99,45 +97,25 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* FORM */}
-          <form onSubmit={handleSubmit} className="premium-card p-6">
+          <form className="premium-card p-6">
             <div className="grid gap-4">
               <input
                 type="text"
-                name="name"
                 placeholder="Full Name"
-                value={formData.name}
-                onChange={handleChange}
                 className="h-12 rounded-xl border border-border px-4"
-                required
               />
-
               <input
                 type="email"
-                name="email"
                 placeholder="Email"
-                value={formData.email}
-                onChange={handleChange}
                 className="h-12 rounded-xl border border-border px-4"
-                required
               />
-
               <textarea
-                name="message"
                 rows={4}
                 placeholder="Message"
-                value={formData.message}
-                onChange={handleChange}
                 className="rounded-xl border border-border px-4 py-3"
-                required
               />
-
-              <button
-                type="submit"
-                disabled={loading}
-                className="rounded-xl bg-primary py-3 font-semibold text-white hover:bg-accent disabled:opacity-50"
-              >
-                {loading ? "Sending..." : "Send Message"}
+              <button className="rounded-xl bg-primary py-3 font-semibold text-white hover:bg-accent">
+                Send Message
               </button>
             </div>
           </form>
