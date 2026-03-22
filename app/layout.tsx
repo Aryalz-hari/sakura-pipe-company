@@ -4,6 +4,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/_components/navbar";
 import Footer from "@/app/_components/footer";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -45,11 +46,6 @@ export default function RootLayout({
             `,
           }}
         />
-<script>
-  gtag('event', 'page_view', {
-    // <event_parameters>
-  });
-</script>
 
 
         {/* ✅ Google Tag Manager (noscript) */}
@@ -61,7 +57,7 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-
+        <Toaster richColors position="top-right" />
         <Navbar />
         <main>{children}</main>
         <Footer />
