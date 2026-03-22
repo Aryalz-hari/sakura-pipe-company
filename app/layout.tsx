@@ -45,6 +45,12 @@ export default function RootLayout({
             `,
           }}
         />
+<script>
+  gtag('event', 'page_view', {
+    // <event_parameters>
+  });
+</script>
+
 
         {/* ✅ Google Tag Manager (noscript) */}
         <noscript>
