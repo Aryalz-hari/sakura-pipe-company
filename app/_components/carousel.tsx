@@ -6,6 +6,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback, useEffect, useState } from "react";
 
 const slides = [
+  { src: "/images/Sakura2.png", alt: "Industrial Pipe" },
+  {
+    src: "/images/sakura-pipes.png",
+    alt: "Industrial Pipes and fittings",
+  },
   {
     src: "/images/pipe1.jpg",
     alt: "Industrial pipe manufacturing",
