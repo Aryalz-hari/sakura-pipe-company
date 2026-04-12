@@ -66,7 +66,7 @@ export default function Footer() {
               <div className="space-y-2 text-sm text-muted-foreground">
                 <p>+91 98765 43210</p>
                 <p>info@sakurapipe.com</p>
-                <p>Industrial Area, Your City</p>
+                <p>Butwal, Rupandehi</p>
               </div>
             </div>
           </div>

@@ -37,7 +37,8 @@ export default function HomePage() {
   return (
     <>
       <section className="relative overflow-hidden pt-20 sm:pt-24">
-        <div className="absolute inset-0 hero-glow" />
+        {/* FIX: Added pointer-events-none and -z-10 to prevent the glow from blocking button clicks */}
+        <div className="absolute inset-0 hero-glow pointer-events-none -z-10" />
 
         <div className="container-shell py-8 sm:py-10 lg:py-12">
           <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-12">
