@@ -92,7 +92,7 @@ export default function ContactPage() {
                 <strong>Email:</strong> info@sakurapipe.com
               </p>
               <p>
-                <strong>Address:</strong> Industrial Area, Your City
+                <strong>Address:</strong> Butwal, Rupandehi
               </p>
             </div>
           </div>
