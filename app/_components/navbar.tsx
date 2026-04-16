@@ -87,13 +87,6 @@ export default function Navbar() {
               </div>
             </div>
 
-            <Link
-              href="/contact"
-              className="nav-font inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition hover:-translate-y-px hover:bg-accent hover:shadow-lg"
-            >
-              Get Quote
-              <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
 
           <button
